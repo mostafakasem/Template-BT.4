@@ -1,7 +1,9 @@
 /* Media Queries */
 
 @media (max-width:1540px){ 
- 
+    html,body{
+        font-size: 16px;
+    }
 }
 @media (max-width:1330px){ 
     .container{
@@ -139,7 +141,7 @@
         width: 100%;
         margin: 0 0 10px !important;
         body.RTL &{
-            margin: 0 0 10px !important;    
+            margin: 0 0 10px 0 !important;    
         }
     }   
 }
