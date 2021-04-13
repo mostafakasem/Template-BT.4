@@ -23,17 +23,15 @@ html {
 
     
 body {
+    direction: rtl;
+    text-align: right;
     font-weight: 300;
     padding: 0;
     margin: 0;
-    font: 18px 'din', serif;
-    //this for design sys preview
-    direction: rtl;
-    text-align: right;
-    //
+    font: 18px 'din', serif;  
     [dir='ltr'] & {
         direction: ltr;
-        text-align: rightleft;
+        text-align: left;
     }
 }
  
