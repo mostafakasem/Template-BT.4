@@ -1,0 +1,16 @@
+$primary: #296FB7 !default;  
+$bg-secondary: #F4F2ED !default; 
+$secondary: #f7931e !default;
+$white: #ffffff !default;
+
+@import 'bootstrap/bootstrap'; 
+@import 'bootstrap/bootstrap-grid'; 
+@import 'bootstrap/bootstrap-reboot'; 
+
+@import 'sub/reset';
+@import 'sub/animation';
+@import 'sub/rtl';
+
+@import 'sub/custom';
+
+@import 'sub/media-queries';

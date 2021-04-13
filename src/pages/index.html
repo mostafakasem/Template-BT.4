@@ -1,0 +1,35 @@
+{% extends "inner-layout.html" %} 
+{% set title = 'Home page' %} 
+
+{% block content %}
+<main>
+  <div class="container">
+
+     <!-- content goes here -->
+      
+  </div>
+</main>
+
+{% endblock %} 
+
+{% block popup %}
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body media-popup">
+        <button type="button" class="close-popup" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> 
+        <p>popup content here</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+{% endblock %} 
+
+{% block scripts %}
+ 
+{% endblock %}

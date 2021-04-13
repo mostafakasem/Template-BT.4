@@ -1,0 +1,293 @@
+   
+ img {
+     max-width: 100%;
+     border: 0
+ }
+ .btn{
+     min-width: 80px;
+     padding: .4rem .75rem .5rem .75rem;
+     border-radius: 10px;
+ }
+.loading-area { 
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.page-layout{
+    padding: 2rem 0;
+}
+.loading-ico {
+    width: 3.75em;
+    animation: 1.5s spin ease infinite;
+    .ring {
+        fill: none;
+        stroke: $primary;
+        stroke-width: 2
+    }
+    .ball {
+        fill: $primary;
+        stroke: none
+    }
+}
+
+@keyframes spin { to { transform: rotate(360deg) } }
+    
+.underline{ 
+    text-decoration: underline;
+}
+// custom
+.wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.main-nav ul{  
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    transition: all .7s ease-in-out; 
+    position: relative;
+    z-index: 1;
+    li > a{
+        padding: 1rem;
+        color: #333; 
+        font-size: 1.1rem;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        &.CMSListMenuLinkHighlighted,
+        &:focus,
+        &:hover{
+            color: #111;
+            background: #ffffff8c;
+        }
+        [dir=ltr] &{
+            font-size: 1.08rem;
+            padding: 1rem .5rem;
+        }
+
+    }
+    li.has-menu{
+        position: relative;
+        & > a:after{
+            content: "";
+            display: inline-block;
+            font-family: cursive;
+            margin: -5px 8px -5px 0;
+            -webkit-transform: rotate(270deg);
+            transform: rotate(135deg);
+            line-height: 0;
+            width: 5px;
+            height: 5px;
+            background: transparent;
+            border-top: 1px solid #6E7D91;
+            border-right: 1px solid #6E7D91;
+            [dir=ltr] &{
+                margin: -5px 0px -5px 8px;
+            }
+        }
+        ul{
+            position: absolute;
+            top: 98%;
+            right: 0; 
+            min-width: 200px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            background: $bg-secondary; 
+            box-shadow: 0px 5px 6px 0px rgba(69,69,69,.64);
+            [dir=ltr] &{
+                right: auto; 
+                left: 0;  
+            }
+            a{
+                padding: .7rem;
+                font-size: .75rem;
+                // background: rgba(0, 0, 0, 0.1607843137254902); 
+                background: $bg-secondary; 
+                &:focus,
+                &:hover{
+                    background: #fff;
+                }
+            }
+        }
+        &:focus,
+        &:hover{
+            > a {
+                color: #333;
+                background: none;
+            }
+            ul{
+                display: block;
+                li{ 
+                    background: transparent;
+                }
+            }
+        }  
+    }
+}
+
+.langswitch{
+    background: transparent;
+    border: 1px solid transparent;
+    width: auto;
+    // font-size: .9rem; 
+    color:  #707070;
+    padding: 0;
+    direction: ltr;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    // &:hover,
+    padding: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    &:focus{
+        outline: none; 
+        background-color: #f0f0f0;
+    }
+}
+
+// .header-bottom{
+//     background: rgba(0, 0, 0, 0.07058823529411765);
+// }
+
+.con {
+    z-index: 15;
+    position: relative;
+    padding: 6px 10px;
+    margin: 0;
+    background: $bg-secondary;
+    cursor: pointer;
+    border-radius: 0;
+    border: 0;
+    width: 44px;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+    display: block;
+    overflow: hidden;
+    // border: 1px solid #ffffff;
+    -webkit-transform: scale(1);
+    transform: scale(1); 
+    // margin: 0 20px 0 0;
+    display: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    .nav-open &{
+        background: lighten($primary, 15%) ;
+        // transform: translateX(-90%);
+    }
+ 
+    // [dir=ltr] &{
+    //     // margin: 0 0 0 20px;
+    //     right: auto;
+    //     left: 015px;
+    // }
+    .bar {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: $primary;
+        margin: 4px auto;
+        transition: all .7s ease;
+    
+    }
+
+    .middle {
+        margin: 0 auto;
+    }
+    &:hover,
+    &:focus{
+        outline: none;
+    }
+}
+
+.nav-open .con .top {
+    -webkit-transform: translateY(7px) rotateZ(47deg);
+    -moz-transform: translateY(7px) rotateZ(47deg);
+    -ms-transform: translateY(7px) rotateZ(47deg);
+    -o-transform: translateY(7px) rotateZ(47deg);
+    transform: translateY(7px) rotateZ(47deg);
+}
+
+.nav-open .con .bottom {
+    -webkit-transform: translateY(-7px) rotateZ(-47deg);
+    -moz-transform: translateY(-7px) rotateZ(-47deg);
+    -ms-transform: translateY(-7px) rotateZ(-47deg);
+    -o-transform: translateY(-7px) rotateZ(-47deg);
+    transform: translateY(-7px) rotateZ(-47deg);
+}
+
+.nav-open .con .middle {
+    width: 0;
+}
+
+  
+.second-level{
+    background: $bg-secondary; 
+    border-bottom: 3px solid lighten($primary, 15%);
+}
+
+ 
+header{
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    .container{
+        position: relative;
+    } 
+   .logo{
+       img,svg{
+           width: 100px;
+       }
+   }
+}
+
+.login-user-icon{
+    background: $bg-secondary;
+    padding: 5px 11px;
+    border-radius: 5px;
+    svg *{
+        fill: $primary;
+    }
+}
+// ----------- Footer
+.page-footer{
+    background-color: $bg-secondary;
+    border-top: 10px solid lighten($primary, 15%);
+    .footer-logo img,
+    .footer-logo svg{
+       width:  50px; 
+       height: auto;
+       filter: grayscale(100%);
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        a{
+            margin: 0 0 .3rem;
+            display: block;
+            font-size: .95rem;
+            &:hover,
+            &:focus{
+                color: #333;
+            }
+        }
+    }
+}
+ 
+ 
+  

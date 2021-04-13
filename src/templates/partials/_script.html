@@ -1,0 +1,18 @@
+<script>
+ 
+    // ------------ Pure javascript
+
+    // Toggle mobile menu
+    var nav = document.querySelector('.navbar-toggle'); 
+    if (typeof(nav) != 'undefined' && nav != null){
+        nav.onclick = function() { 
+            var tabbody = document.querySelector('body');     
+            if (tabbody.classList.contains('nav-open')) {
+                tabbody.classList.remove('nav-open');
+            } else {
+                tabbody.classList.add('nav-open');
+            } 
+        } 
+    }  
+ 
+</script>
