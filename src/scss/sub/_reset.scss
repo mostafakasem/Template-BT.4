@@ -34,7 +34,12 @@ body {
         text-align: left;
     }
 }
- 
+// for demo
+.wrap{
+    direction: rtl;
+    text-align: right;
+    border: 1px solid #777;
+}
 a,
 input,
 button,
