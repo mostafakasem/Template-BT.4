@@ -9120,8 +9120,7 @@ body {
 
 .wrap {
   direction: rtl;
-  text-align: right;
-  border: 1px solid #777; }
+  text-align: right; }
 
 a,
 input,
