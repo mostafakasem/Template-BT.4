@@ -32,7 +32,10 @@ body {
         text-align: right;
     }
 }
-
+[dir='rtl']   {
+    direction: rtl;
+    text-align: right;
+}
 
 a,
 input,
