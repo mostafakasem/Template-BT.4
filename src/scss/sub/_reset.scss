@@ -27,16 +27,16 @@ body {
     padding: 0;
     margin: 0;
     font: 18px 'din', serif;
-    [dir='rtl'] & {
-        direction: rtl;
-        text-align: right;
-    }
-}
-[dir='rtl']   {
+    //this for design sys preview
     direction: rtl;
     text-align: right;
+    //
+    [dir='ltr'] & {
+        direction: ltr;
+        text-align: rightleft;
+    }
 }
-
+ 
 a,
 input,
 button,

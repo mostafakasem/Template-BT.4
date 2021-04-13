@@ -9111,14 +9111,12 @@ body {
   font-weight: 300;
   padding: 0;
   margin: 0;
-  font: 18px 'din', serif; }
-  [dir='rtl'] body {
-    direction: rtl;
-    text-align: right; }
-
-[dir='rtl'] {
+  font: 18px 'din', serif;
   direction: rtl;
   text-align: right; }
+  [dir='ltr'] body {
+    direction: ltr;
+    text-align: rightleft; }
 
 a,
 input,
