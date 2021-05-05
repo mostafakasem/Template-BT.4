@@ -28,7 +28,7 @@ body {
     font-weight: 300;
     padding: 0;
     margin: 0;
-    font: 18px 'din', serif;  
+    font: 16px 'din', serif;  
     [dir='ltr'] & {
         direction: ltr;
         text-align: left;
@@ -102,4 +102,46 @@ p{
  
 .rounded {
     border-radius: 20px!important;
+}
+
+.col-form-label{
+    display: block;
+}
+.form-control{
+    height: 40px;
+    border-radius: 0;
+    color: #111;
+    padding: 0px 10px 5px;
+    // line-height: 1;
+    &:hover{
+        border-color: #B9B9B9;
+    }
+    &:focus{
+        border-color: #888;
+        box-shadow: 0 0 0;
+    }
+    &[readonly],
+    &:disabled{
+        background-color: #EFEFEF;
+        color: #888888;
+        text-align: justify;
+    } 
+    &.is-invalid, 
+    .was-validated &:invalid{
+        padding: 0px 10px 5px;
+        background-image: none;
+    } 
+}
+.custom-select.is-invalid, 
+.form-control.is-invalid, 
+.was-validated .custom-select:invalid, 
+.was-validated .form-control:invalid {
+    border-color: $danger;
+}
+.required:after {
+    content: "*";
+    color: $danger;
+    font-size: 1.2rem;
+    display: inline;
+    line-height: 1;
 }

@@ -483,7 +483,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               $gray-600 !default;
+$input-placeholder-color:               $gray-500 !default;
 $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
@@ -973,9 +973,9 @@ $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                $border-width !default;
 
-$alert-bg-level:                    -10 !default;
-$alert-border-level:                -9 !default;
-$alert-color-level:                 6 !default;
+$alert-bg-level:                    -5 !default;
+$alert-border-level:                -5 !default;
+$alert-color-level:                 8 !default;
 
 
 // Progress bars

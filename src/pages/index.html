@@ -2,33 +2,22 @@
 {% set title = 'Home page' %} 
 
 {% block content %}
-<main>
-  <div class="container">
-
-     <!-- content goes here -->
-      
-  </div>
-</main>
-
-{% endblock %} 
-
-{% block popup %}
-<!-- Modal -->
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true" >
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-body media-popup">
-        <button type="button" class="close-popup" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button> 
-        <p>popup content here</p>
-      </div>
-    </div>
-  </div>
-</div>
  
+  <div class="page-layout">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb p-0 small bg-transparent">
+              <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li> 
+              <li class="breadcrumb-item active" aria-current="page"> {{title}}</li>
+          </ol>
+      </nav>
+      <h1 class="page-title mb-4"> {{title}} </h1> 
+          <p>content here   </p>
+    </div> 
+  </div> 
+
 {% endblock %} 
+ 
 
 {% block scripts %}
  
